@@ -1,0 +1,16 @@
+{
+  "extends": "@workspace/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/api/*": ["./src/*"]
+    },
+    "types": ["node", "jsdom"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "isolatedModules": true
+  },
+  "include": ["svgr.d.ts", "."],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,57 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+
+#nullable disable
+
+namespace MyApp.Infrastructure.Data.Migrations
+{
+    /// <inheritdoc />
+    public partial class AddNewsletterSubscription : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.CreateTable(
+                name: "NewsletterSubscriptions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Email = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false, defaultValue: true),
+                    Created = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    CreatedBy = table.Column<string>(type: "text", nullable: true),
+                    LastModified = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NewsletterSubscriptions", x => x.Id);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NewsletterSubscriptions_Created",
+                table: "NewsletterSubscriptions",
+                column: "Created");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NewsletterSubscriptions_Email",
+                table: "NewsletterSubscriptions",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NewsletterSubscriptions_IsActive",
+                table: "NewsletterSubscriptions",
+                column: "IsActive");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "NewsletterSubscriptions");
+        }
+    }
+}

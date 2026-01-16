@@ -1,0 +1,13 @@
+export const HOME = "/";
+export const PRIVACY = "/privacy-policy";
+export const LISTING = "/listings";
+export const CAR_DETAILS = "/listings";
+export const ABOUT_US = "/about-us";
+export const FINANCE = "/finance";
+export const COMPARE = "/compare";
+export const CONTACT_US = "/contact";
+export const FIND_US = "/find-us";
+export const AUTH_LOGIN = "/auth/login";
+export const NEWS = "/news";
+export const NEWS_DETAIL = "/news";
+export const CUSTOMER_REVIEWS = "/customer-reviews";

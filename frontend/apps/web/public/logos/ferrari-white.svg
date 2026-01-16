@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="30" width="80" height="40" stroke="white" stroke-width="2" fill="none" />
+    <path d="M10 50 Q50 30 90 50 Q50 70 10 50" stroke="white" stroke-width="2" fill="none" />
+    <text x="50" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+        font-size="8" font-weight="bold">FERRARI</text>
+    <path
+        d="M20 35 L25 65 M30 35 L35 65 M40 35 L45 65 M50 35 L55 65 M60 35 L65 65 M70 35 L75 65 M80 35 L85 65"
+        stroke="white" stroke-width="1" />
+</svg>

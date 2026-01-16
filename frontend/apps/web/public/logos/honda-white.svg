@@ -1,0 +1,6 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="35" width="60" height="30" stroke="white" stroke-width="2" fill="none" rx="5" />
+    <path d="M30 50 L70 50 M50 35 L50 65" stroke="white" stroke-width="2" />
+    <text x="50" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+        font-size="8" font-weight="bold">HONDA</text>
+</svg>
